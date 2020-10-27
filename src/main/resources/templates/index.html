@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.3c.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" >
+	
+	<head>
+		<meta charset="Utf-8">
+		<title>Insert title here</title>
+		</head>
+	<body>
+		
+		<form method="get" th:action="@{/}" >
+			Cep:
+			<input type="text" name="cep" 
+				th:value="${endereco != null} ? ${endereco.cep}"/>
+				
+			<input type="submit" value="pesquisar"/><br />
+			
+			Estado:
+			<input type="text" 
+				th:value="${endereco != null} ? ${endereco.state}"/><br />
+			
+			Cidade:	
+			<input type="text" 
+				th:value="${endereco != null} ? ${endereco.city}"/><br />
+				
+			Bairro:	
+			<input type="text" 
+				th:value="${endereco != null} ? ${endereco.neighborhood}"/><br />
+				
+			Rua:	
+			<input type="text" 
+				th:value="${endereco != null} ? ${endereco.street}"/>
+			 
+		</form>
+		
+	</body>
+</html>
